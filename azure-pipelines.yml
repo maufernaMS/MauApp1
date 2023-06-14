@@ -1,12 +1,7 @@
-using System;
-
-namespace HelloWorld
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'mauferna-AS(acaf6d52-661c-4075-8ce4-3a38dc6ed696)'
+    appType: 'webApp'
+    WebAppName: '2305310040006759'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
